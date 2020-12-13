@@ -40,6 +40,10 @@ namespace SchoolConnector.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Grade")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 

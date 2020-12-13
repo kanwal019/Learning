@@ -12,14 +12,16 @@ namespace DataConsole
             student.Add("Jane Connor");
             student.Add("John Smith");
             student.Add("Jane Smith");
+            student.Add("Jinx Smith");
 
-            var students = student.Get("Smith");
+            var students = student.Find("Smith");
             if (students.Count > 0)
             {
                 foreach(var stu in students)
                 {
                     Console.WriteLine("Id - " + stu.StudentId);
                     Console.WriteLine("Name - " + stu.Name);
+                    Console.WriteLine("Grade - " + stu.Grade);
                     Console.WriteLine();
                 }
             }
