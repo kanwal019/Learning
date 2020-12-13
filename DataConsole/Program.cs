@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolConnector.Models;
+using System;
 
 namespace DataConsole
 {
@@ -6,7 +7,17 @@ namespace DataConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (var context = new SchoolContext())
+            {
+
+                var std = new Student()
+                {
+                    Name = "John"
+                };
+
+                context.Students.Add(std);
+                context.SaveChanges();
+            }
         }
     }
 }
