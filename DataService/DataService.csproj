@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SQLConnector\SQLConnector.csproj" />
+    <ProjectReference Include="..\BikeStoresConnector\BikeStoresConnector.csproj" />
+    <ProjectReference Include="..\SchoolConnector\SchoolConnector.csproj" />
   </ItemGroup>
 
 </Project>

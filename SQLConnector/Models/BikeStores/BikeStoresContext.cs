@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace SQLConnector.Models
+namespace SQLConnector.Models.BikeStores
 {
     public partial class BikeStoresContext : DbContext
     {

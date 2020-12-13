@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace SQLConnector.Models
+namespace SQLConnector.Models.BikeStores
 {
     public partial class Stock
     {
