@@ -13,10 +13,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CRUD\Delete\" />
-    <Folder Include="CRUD\Update\" />
-    <Folder Include="CRUD\Read\" />
-  </ItemGroup>
-
 </Project>
