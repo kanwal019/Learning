@@ -1,9 +1,0 @@
-W:\Repo\Learning\SQLConnector\bin\Debug\netstandard2.1\SQLConnector.deps.json
-W:\Repo\Learning\SQLConnector\bin\Debug\netstandard2.1\SQLConnector.dll
-W:\Repo\Learning\SQLConnector\bin\Debug\netstandard2.1\SQLConnector.pdb
-W:\Repo\Learning\SQLConnector\obj\Debug\netstandard2.1\SQLConnector.AssemblyInfoInputs.cache
-W:\Repo\Learning\SQLConnector\obj\Debug\netstandard2.1\SQLConnector.AssemblyInfo.cs
-W:\Repo\Learning\SQLConnector\obj\Debug\netstandard2.1\SQLConnector.csproj.CoreCompileInputs.cache
-W:\Repo\Learning\SQLConnector\obj\Debug\netstandard2.1\SQLConnector.dll
-W:\Repo\Learning\SQLConnector\obj\Debug\netstandard2.1\SQLConnector.pdb
-W:\Repo\Learning\SQLConnector\obj\Debug\netstandard2.1\SQLConnector.csprojAssemblyReference.cache
