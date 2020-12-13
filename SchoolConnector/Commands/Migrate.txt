@@ -1,3 +1,5 @@
 ﻿add-migration CreateSchoolDB
 
 update-database –verbose
+
+update-database -TargetMigration:SchoolDB-v0.1
