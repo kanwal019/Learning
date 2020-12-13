@@ -1,4 +1,5 @@
-﻿using SchoolConnector.Models;
+﻿using SchoolConnector.CRUD.Create;
+using SchoolConnector.Models;
 using System;
 
 namespace DataConsole
@@ -7,17 +8,9 @@ namespace DataConsole
     {
         static void Main(string[] args)
         {
-            using (var context = new SchoolContext())
-            {
-
-                var std = new Student()
-                {
-                    Name = "John"
-                };
-
-                context.Students.Add(std);
-                context.SaveChanges();
-            }
+            var addStudent = new AddStudent();
+            addStudent.Add("Smith");
+            addStudent.Add("Jane");
         }
     }
 }
