@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService", "DataService\DataService.csproj", "{C405876B-7B16-4C8F-B055-48D42AECD236}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeStoresConnector", "BikeStoresConnector\BikeStoresConnector.csproj", "{B3CF4A1C-CCA3-4F23-B052-826707CCC21F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeStoresConnector", "BikeStoresConnector\BikeStoresConnector.csproj", "{B3CF4A1C-CCA3-4F23-B052-826707CCC21F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolConnector", "SchoolConnector\SchoolConnector.csproj", "{FA78A5BE-C5B6-41A1-8010-581B642BE922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolConnector", "SchoolConnector\SchoolConnector.csproj", "{FA78A5BE-C5B6-41A1-8010-581B642BE922}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConsole", "DataConsole\DataConsole.csproj", "{0D0DD9E9-8D7D-4B2A-B2EA-FED1D5387005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataConsole", "DataConsole\DataConsole.csproj", "{0D0DD9E9-8D7D-4B2A-B2EA-FED1D5387005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopsConsole", "OopsConsole\OopsConsole.csproj", "{1DDB83F9-13AA-4164-919C-4F4A204A3458}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0D0DD9E9-8D7D-4B2A-B2EA-FED1D5387005}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D0DD9E9-8D7D-4B2A-B2EA-FED1D5387005}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D0DD9E9-8D7D-4B2A-B2EA-FED1D5387005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DDB83F9-13AA-4164-919C-4F4A204A3458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DDB83F9-13AA-4164-919C-4F4A204A3458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DDB83F9-13AA-4164-919C-4F4A204A3458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DDB83F9-13AA-4164-919C-4F4A204A3458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
