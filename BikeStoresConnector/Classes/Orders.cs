@@ -24,7 +24,7 @@ namespace BikeStoresConnector.Classes
                              customer in context.Customers on order.CustomerId equals customer.CustomerId join
                              staff in context.Staffs on order.StaffId equals staff.StaffId join
                              store in context.Stores on order.StoreId equals store.StoreId
-                             orderby order.OrderId
+                             orderby order.OrderDate descending
                              select new Order() { 
                                 OrderId = order.OrderId,
                                 OrderDate = order.OrderDate,
