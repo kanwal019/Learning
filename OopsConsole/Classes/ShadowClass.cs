@@ -49,6 +49,9 @@ namespace OopsConsole.Classes
     {
         public static void DisplayResult()
         {
+            Console.WriteLine("------- Shadow Implementation -------");
+            Console.WriteLine();
+
             Console.WriteLine("-- ShadowClass shadow = new ShadowClass(); --");
             
             ShadowClass shadow = new ShadowClass();
@@ -89,6 +92,8 @@ namespace OopsConsole.Classes
              * a child class object, the base class object is auto initiated, so base class reference 
              * variable can point to child class object.
              */
+
+            Console.WriteLine();
         }
     }
 }

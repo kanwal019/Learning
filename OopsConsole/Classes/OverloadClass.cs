@@ -31,6 +31,9 @@ namespace OopsConsole.Classes
     {
         public static void DisplayResult()
         {
+            Console.WriteLine("------- Overload Implementation -------");
+            Console.WriteLine();
+
             Console.WriteLine("-- OverloadClass shadow = new OverloadClass(); --");
 
             OverloadClass overload = new OverloadClass();
@@ -38,6 +41,7 @@ namespace OopsConsole.Classes
             overload.FunctionA("Hello");
             overload.FunctionA(100, 200);
             overload.FunctionA("Hello", "World");
+            Console.WriteLine();
             Console.WriteLine();
         }
     }

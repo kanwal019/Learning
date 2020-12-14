@@ -7,8 +7,9 @@ namespace OopsConsole
     {
         static void Main(string[] args)
         {
-            //OverloadImplementation.DisplayResult();
+            OverloadImplementation.DisplayResult();
             ShadowImplementation.DisplayResult();
+            OverrideImplementation.DisplayResult();
         }
     }
 }
