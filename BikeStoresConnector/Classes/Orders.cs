@@ -77,7 +77,7 @@ namespace BikeStoresConnector.Classes
                 OrderItem orderItem = new OrderItem()
                 {
                     OrderId = orderId,
-                    ItemId = (from o in context.OrderItems select o).Count(),
+                    ItemId = (from o in context.OrderItems where o.OrderId == orderId select o).Count() + 1,
                     ProductId = product.ProductId,
                     Quantity = quantity,
                     ListPrice = product.ListPrice,
