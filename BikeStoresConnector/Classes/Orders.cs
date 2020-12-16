@@ -46,5 +46,54 @@ namespace BikeStoresConnector.Classes
                 return new List<Order>();
             }
         }
+
+        public Order GetOrder(int orderId)
+        {
+            try
+            {
+                return (from order in context.Orders
+                       where order.OrderId == orderId
+                       select new Order()
+                       {
+                           OrderId = order.OrderId,
+                           OrderDate = order.OrderDate,
+                           OrderStatus = order.OrderStatus,
+                           StoreId = order.StoreId,
+                           OrderItems = context.OrderItems
+                            .Where(orderItems => orderItems.OrderId == order.OrderId).ToList()
+                       }).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _ = ex;
+                return new Order();
+            }
+        }
+
+        public Order AddItems(Product product, int orderId, int quantity, decimal discount)
+        {
+            try
+            {
+                OrderItem orderItem = new OrderItem()
+                {
+                    OrderId = orderId,
+                    ItemId = (from o in context.OrderItems select o).Count(),
+                    ProductId = product.ProductId,
+                    Quantity = quantity,
+                    ListPrice = product.ListPrice,
+                    Discount = discount
+                };
+
+                context.OrderItems.Add(orderItem);
+                context.SaveChanges();
+           
+                return GetOrder(orderId);
+            }
+            catch (Exception ex)
+            {
+                _ = ex;
+                return new Order();
+            }
+        }
     }
 }

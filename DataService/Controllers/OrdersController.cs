@@ -27,5 +27,39 @@ namespace DataService.Controllers
                 return new List<Order>();
             }
         }
+
+        [HttpGet("getOrder/{orderId}")]
+        public ActionResult<Order> GetOrder(int orderId)
+        {
+            try
+            {
+                var filters = new Dictionary<string, string>();
+                var context = new BikeStoresContext();
+                var orders = new BikeStoresConnector.Classes.Orders(context);
+                return orders.GetOrder(orderId);
+            }
+            catch (Exception ex)
+            {
+                _ = ex;
+                return new Order();
+            }
+        }
+
+        [HttpPatch("addItem")]
+        public ActionResult<Order> AddItem(Product product, int orderId, int quantity, decimal discount)
+        {
+            try
+            {
+                var filters = new Dictionary<string, string>();
+                var context = new BikeStoresContext();
+                var orders = new BikeStoresConnector.Classes.Orders(context);
+                return orders.AddItems(product, orderId, quantity, discount);
+            }
+            catch (Exception ex)
+            {
+                _ = ex;
+                return new Order();
+            }
+        }
     }
 }
