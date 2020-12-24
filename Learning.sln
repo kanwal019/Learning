@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataConsole", "DataConsole\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopsConsole", "OopsConsole\OopsConsole.csproj", "{1DDB83F9-13AA-4164-919C-4F4A204A3458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeStoreWeb", "BikeStoreWeb\BikeStoreWeb.csproj", "{938B2A70-1D39-4604-908F-36B9CB5BA206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeStoreWeb", "BikeStoreWeb\BikeStoreWeb.csproj", "{938B2A70-1D39-4604-908F-36B9CB5BA206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherExamples", "OtherExamples\OtherExamples.csproj", "{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{938B2A70-1D39-4604-908F-36B9CB5BA206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{938B2A70-1D39-4604-908F-36B9CB5BA206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{938B2A70-1D39-4604-908F-36B9CB5BA206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

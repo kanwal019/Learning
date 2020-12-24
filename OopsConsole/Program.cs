@@ -1,15 +1,13 @@
 ﻿using System;
-using OopsConsole.Classes;
+using System.Collections.Generic;
 
 namespace OopsConsole
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            OverloadImplementation.DisplayResult();
-            ShadowImplementation.DisplayResult();
-            OverrideImplementation.DisplayResult();
-        }
-    }
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			OtherExamples.Classes.IndexerExample.DisplayResult();
+		}		
+	}
 }
