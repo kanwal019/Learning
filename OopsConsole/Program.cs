@@ -7,7 +7,7 @@ namespace OopsConsole
 	{
 		static void Main(string[] args)
 		{
-			OtherExamples.Classes.IndexerExample.DisplayResult();
+			OtherExamples.Classes.UsingExample.DisplayResult();
 		}		
 	}
 }
