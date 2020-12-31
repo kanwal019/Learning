@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopsConsole", "OopsConsole\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeStoreWeb", "BikeStoreWeb\BikeStoreWeb.csproj", "{938B2A70-1D39-4604-908F-36B9CB5BA206}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherExamples", "OtherExamples\OtherExamples.csproj", "{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtherExamples", "OtherExamples\OtherExamples.csproj", "{FDA37505-6F16-4BF2-8E78-27BC3DB7B774}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassicLibrary", "ClassicLibrary\ClassicLibrary.vcxproj", "{F164521E-5F71-4F9A-A815-CBEA9EA1E5F2}"
 EndProject
@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkLibrary", "Framewo
 	ProjectSection(ProjectDependencies) = postProject
 		{F164521E-5F71-4F9A-A815-CBEA9EA1E5F2} = {F164521E-5F71-4F9A-A815-CBEA9EA1E5F2}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{1A09C461-D089-4288-A091-9DF0FC8917AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +142,18 @@ Global
 		{7CD4825E-9724-4CF5-8D41-B843A1479B78}.Release|x64.Build.0 = Release|Any CPU
 		{7CD4825E-9724-4CF5-8D41-B843A1479B78}.Release|x86.ActiveCfg = Release|Any CPU
 		{7CD4825E-9724-4CF5-8D41-B843A1479B78}.Release|x86.Build.0 = Release|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Release|x64.Build.0 = Release|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A09C461-D089-4288-A091-9DF0FC8917AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
