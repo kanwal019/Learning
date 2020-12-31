@@ -28,6 +28,10 @@ namespace Common.Generics
 
             var dictionary = new GenericDictionary<string, Book>();
             dictionary.Add("Sample", book);
+
+            var number = new Nullable<int>(5);
+            Console.WriteLine("Has Value ? " + number.HasValue);
+            Console.WriteLine("Value - " + number.GetValueOrDefault());
         }
     }
 }
