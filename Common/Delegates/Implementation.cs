@@ -14,8 +14,14 @@ namespace Common.Delegates
 
             PhotoProcessor.PhotoFilterHandler filterHandler = filters.ApplyBrightness;
             filterHandler += filters.ApplyContrast;
+            filterHandler += RemoveReadEyeFilter;
 
             processor.Process("somePhoto", filterHandler);
+        }
+
+        static void RemoveReadEyeFilter(Photo photo)
+        {
+            Console.WriteLine("Remove Red Eye");
         }
     }
 }
