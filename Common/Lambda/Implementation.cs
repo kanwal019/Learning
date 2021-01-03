@@ -8,7 +8,12 @@ namespace Common.Lambda
     {
         public static void DisplayResult()
         {
+            Func<int, int> square = Square;
+            Func<int, int> squareLambda = num => num * num;
+
             Console.WriteLine(Square(5));
+            Console.WriteLine(square(5));
+            Console.WriteLine(squareLambda(5));
         }
 
         static int Square(int num)
