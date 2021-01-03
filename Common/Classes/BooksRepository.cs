@@ -45,15 +45,28 @@ namespace Common.Classes
             };
         }
 
+        public delegate string BookAddedEventHandler(object source, EventArgs args);
+        public event BookAddedEventHandler BookAdded;
+
         public string AddBooks(List<Book> books)
         {
-            FileLogger.LogMessage(DateTime.Now + " - " + books.Count + "books added.");
+            var message = DateTime.Now + " - " + books.Count + (books.Count > 1 ? " books " : " book ") + "added";
+            FileLogger.LogMessage(message);
+            OnBookAdded();
             return books.Count + " books added !!";
         }
 
         public string Add(Book book)
         {
             return AddBooks(new List<Book> { book });
+        }
+
+        protected virtual void OnBookAdded()
+        {
+            if(BookAdded != null)
+            {
+                BookAdded(this, EventArgs.Empty);
+            }
         }
     }
 }
