@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkLibrary", "Framewo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{1A09C461-D089-4288-A091-9DF0FC8917AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{BF527AEF-B78A-40FB-B1EE-15EA41696065}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "Logging\LoggerService.csproj", "{BF527AEF-B78A-40FB-B1EE-15EA41696065}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
