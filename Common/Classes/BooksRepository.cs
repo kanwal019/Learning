@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Logging;
 
 namespace Common.Classes
 {
@@ -41,6 +43,17 @@ namespace Common.Classes
                     Price = 100
                 },
             };
+        }
+
+        public string AddBooks(List<Book> books)
+        {
+            FileLogger.LogMessage(DateTime.Now + " - " + books.Count + "books added.");
+            return books.Count + " books added !!";
+        }
+
+        public string Add(Book book)
+        {
+            return AddBooks(new List<Book> { book });
         }
     }
 }
