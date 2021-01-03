@@ -8,6 +8,19 @@ namespace Common.Lambda
     {
         public static void DisplayResult()
         {
+            LambdaStarters();
+            Extra();
+
+        }
+        static void Extra()
+        {
+            const int num = 10;
+            Func<int, int> multiplier = n => n * num; // Lambda can use any variable defined in the method
+            Console.WriteLine(multiplier(10));
+        }
+
+        static void LambdaStarters()
+        {
             Func<int, int> square = Square;
             Func<int, int> squareLambda = num => num * num;
 
