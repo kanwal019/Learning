@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Common.Classes;
 
 namespace Common.Lambda
 {
@@ -10,8 +11,26 @@ namespace Common.Lambda
         {
             LambdaStarters();
             Extra();
-
+            ImplementBooks();
         }
+
+        static void ImplementBooks()
+        {
+            var books = new BooksRepository().GetBooks();
+            var cheapBooks = books.FindAll(Book.IsCheap);
+            var cheapBooksLambda = books.FindAll(book => book.Price < 300); // Gives same result
+
+            foreach(var book in cheapBooks)
+            {
+                Console.WriteLine(book.Name + " by " + book.Author);
+            }
+
+            foreach (var book in cheapBooksLambda)
+            {
+                Console.WriteLine(book.Name + " by " + book.Author);
+            }
+        }
+
         static void Extra()
         {
             const int num = 10;

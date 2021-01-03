@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Common.Classes
@@ -14,6 +13,11 @@ namespace Common.Classes
         public int NumberOfPages
         {
             get; set;
+        }
+
+        public static bool IsCheap(Book book)
+        {
+            return book.Price < 300;
         }
     }
 }
