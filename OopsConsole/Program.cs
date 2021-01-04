@@ -7,7 +7,7 @@ namespace OopsConsole
 	{
 		static void Main(string[] args)
 		{
-            Implementation.Events.DisplayResult();
+            Implementation.ExtentionMethods.DisplayResult();
 		}		
 	}
 }
