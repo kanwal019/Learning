@@ -46,8 +46,7 @@ namespace OopsConsole.Implementation
             };
         }
 
-        public delegate void BookAddedEventHandler(object source, EventArgs args);
-        public event BookAddedEventHandler BookAdded;
+        public EventHandler<StringArgs> BookAdded;
 
         public void AddBooks(List<Book> books)
         {
@@ -62,10 +61,7 @@ namespace OopsConsole.Implementation
 
         protected virtual void OnBookAdded(string message)
         {
-            if (BookAdded != null)
-            {
-                BookAdded(this, new StringArgs(message));
-            }
+            BookAdded?.Invoke(this, new StringArgs(message));
         }
     }
 }
