@@ -27,6 +27,33 @@ namespace OopsConsole.Implementation
                                     .OrderBy(b => b.Name)
                                     .Select(b => new { b.Name, b.Author }); // Gives same result
 
+            //var singleCheapBook = books.SingleOrDefault(b => b.Price < 300); // Throws exception due to multiple results
+            var firstCheapBook = books.FirstOrDefault(b => b.Price < 300);
+            var lastCheapBook = books.LastOrDefault(b => b.Price < 300);
+            var pagedBooks = books.Skip(2).Take(3);
+
+            var maxPrice = books.Max(b => b.Price);
+            var minPrice = books.Min(b => b.Price);
+
+            Console.WriteLine("The most expensive book costs " + maxPrice + " bucks.");
+            Console.WriteLine();
+
+            Console.WriteLine("The cheapest book costs " + minPrice + " bucks.");
+            Console.WriteLine();
+
+            Console.WriteLine(firstCheapBook.Name + " by " + firstCheapBook.Author);
+            Console.WriteLine();
+
+            Console.WriteLine(lastCheapBook.Name + " by " + lastCheapBook.Author);
+            Console.WriteLine();
+
+            foreach (var book in pagedBooks)
+            {
+                Console.WriteLine(book.Name + " by " + book.Author);
+            }
+
+            Console.WriteLine();
+
             foreach (var book in cheapBooks)
             {
                 Console.WriteLine(book.Name + " by " + book.Author);
