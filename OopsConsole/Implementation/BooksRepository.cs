@@ -43,6 +43,22 @@ namespace OopsConsole.Implementation
                     NumberOfPages = 200,
                     Price = 100
                 },
+                new Book
+                {
+                    Author = "Author 5",
+                    Id = 5,
+                    Name = "Book 5",
+                    NumberOfPages = 200,
+                    Price = 200
+                },
+                new Book
+                {
+                    Author = "Author 6",
+                    Id = 6,
+                    Name = "Book 6",
+                    NumberOfPages = 300,
+                    Price = 100
+                },
             };
         }
 
