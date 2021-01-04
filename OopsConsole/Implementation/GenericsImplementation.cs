@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Common.Classes;
+using Common.Generics;
 
-namespace Common.Generics
+namespace OopsConsole.Implementation
 {
     class GenericsImplementation
     {
@@ -29,7 +30,7 @@ namespace Common.Generics
             var dictionary = new GenericDictionary<string, Book>();
             dictionary.Add("Sample", book);
 
-            var number = new Nullable<int>(5);
+            var number = new Common.Generics.Nullable<int>(5);
             Console.WriteLine("Has Value ? " + number.HasValue);
             Console.WriteLine("Value - " + number.GetValueOrDefault());
         }

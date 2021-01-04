@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Common.Classes;
+using Common.Delegates;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Common.Classes;
 
-namespace Common.Delegates
+namespace OopsConsole.Implementation
 {
-    public class Implementation
+    public class Delegates
     {
         public static void DisplayResult()
         {

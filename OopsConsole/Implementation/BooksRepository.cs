@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Common.Classes;
+using System;
 using System.Collections.Generic;
-using Logging;
+using System.Text;
 
-namespace Common.Classes
+namespace OopsConsole.Implementation
 {
     public class BooksRepository
     {
@@ -45,27 +46,25 @@ namespace Common.Classes
             };
         }
 
-        public delegate string BookAddedEventHandler(object source, EventArgs args);
+        public delegate void BookAddedEventHandler(object source, EventArgs args);
         public event BookAddedEventHandler BookAdded;
 
-        public string AddBooks(List<Book> books)
+        public void AddBooks(List<Book> books)
         {
             var message = DateTime.Now + " - " + books.Count + (books.Count > 1 ? " books " : " book ") + "added";
-            FileLogger.LogMessage(message);
-            OnBookAdded();
-            return books.Count + " books added !!";
+            OnBookAdded(message);
         }
 
-        public string Add(Book book)
+        public void Add(Book book)
         {
-            return AddBooks(new List<Book> { book });
+            AddBooks(new List<Book> { book });
         }
 
-        protected virtual void OnBookAdded()
+        protected virtual void OnBookAdded(string message)
         {
-            if(BookAdded != null)
+            if (BookAdded != null)
             {
-                BookAdded(this, EventArgs.Empty);
+                BookAdded(this, new StringArgs(message));
             }
         }
     }

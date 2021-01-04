@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Common.Classes;
 
-namespace Common.Lambda
+namespace OopsConsole.Implementation
 {
-    public class Implementation
+    public class Lambda
     {
         public static void DisplayResult()
         {

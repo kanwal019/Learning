@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Common.Classes;
 
-namespace Common.Events
+namespace OopsConsole.Implementation
 {
-    public class Implementation
+    public class Events
     {
         public static void DisplayResult()
         {
@@ -14,6 +14,7 @@ namespace Common.Events
 
         static void AddOneBook()
         {
+            var booksRepo = new BooksRepository();
             var book = new Book
             {
                 Author = "Author 5",
@@ -23,7 +24,9 @@ namespace Common.Events
                 Price = 150
             };
 
-            Console.WriteLine(new BooksRepository().Add(book));
+            booksRepo.BookAdded += LoggerService.FileLogger.OnBookAdded;
+            booksRepo.BookAdded += LoggerService.ConsoleLogger.OnBookAdded;
+            booksRepo.Add(book);
         }
     }
 }
