@@ -21,29 +21,26 @@ namespace NetCoreApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Before Invoke from 1st app.Use()\n");
-                await next();
-                await context.Response.WriteAsync("After Invoke from 1st app.Use()\n");
-            });
+            app.Map("/map1", HandleMapOne);
 
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Before Invoke from 2nd app.Use()\n");
-                await next();
-                await context.Response.WriteAsync("After Invoke from 2nd app.Use()\n");
+            app.Map("/map2", a => {
+                a.Run(async context =>
+                {
+                    await context.Response.WriteAsync("Second Mapping !!");
+                });
             });
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello from 1st app.Run()\n");
+                await context.Response.WriteAsync("Main Application !!");
             });
+        }
 
-            // the following will never be executed    
-            app.Run(async (context) =>
+        private static void HandleMapOne(IApplicationBuilder app)
+        {
+            app.Run(async context =>
             {
-                await context.Response.WriteAsync("Hello from 2nd app.Run()\n");
+                await context.Response.WriteAsync("First Mapping !!");
             });
         }
     }
