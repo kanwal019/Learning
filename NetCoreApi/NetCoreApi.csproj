@@ -11,7 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Databases\" />
+    <None Include="wwwroot\files\BikeStores Sample Database - create objects.sql" />
+    <None Include="wwwroot\files\BikeStores Sample Database - drop all objects.sql" />
+    <None Include="wwwroot\files\BikeStores Sample Database - load data.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>
