@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetCoreApi.Middleware.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,26 +22,20 @@ namespace NetCoreApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.Map("/map1", HandleMapOne);
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-            app.Map("/map2", a => {
-                a.Run(async context =>
+            app.UseRouting();
+            app.UseLogUrl();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Second Mapping !!");
+                    await context.Response.WriteAsync("Application Running !!");
                 });
-            });
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Main Application !!");
-            });
-        }
-
-        private static void HandleMapOne(IApplicationBuilder app)
-        {
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("First Mapping !!");
             });
         }
     }
