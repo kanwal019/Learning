@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "Logging\LoggerService.csproj", "{BF527AEF-B78A-40FB-B1EE-15EA41696065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreApi", "NetCoreApi\NetCoreApi.csproj", "{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,6 +170,18 @@ Global
 		{BF527AEF-B78A-40FB-B1EE-15EA41696065}.Release|x64.Build.0 = Release|Any CPU
 		{BF527AEF-B78A-40FB-B1EE-15EA41696065}.Release|x86.ActiveCfg = Release|Any CPU
 		{BF527AEF-B78A-40FB-B1EE-15EA41696065}.Release|x86.Build.0 = Release|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Debug|x64.Build.0 = Debug|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Debug|x86.Build.0 = Debug|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Release|x64.ActiveCfg = Release|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Release|x64.Build.0 = Release|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Release|x86.ActiveCfg = Release|Any CPU
+		{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
