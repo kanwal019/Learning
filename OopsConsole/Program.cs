@@ -7,7 +7,7 @@ namespace OopsConsole
 	{
 		static void Main(string[] args)
 		{
-            Implementation.ImmutableStr.DisplayResult();
+            Implementation.DynamicParser.DisplayResult();
 		}		
 	}
 }
