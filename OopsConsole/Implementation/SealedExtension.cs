@@ -10,5 +10,12 @@ namespace OopsConsole.Implementation
         {
             Console.WriteLine(Guid.NewGuid());
         }
+
+        public static void DisplayResult()
+        {
+            var sealedObj = new Classes.SealedClass();
+            sealedObj.DisplayRandomNumber();
+            sealedObj.DisplayRandomGuid();
+        }
     }
 }
