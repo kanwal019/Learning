@@ -4,8 +4,7 @@
 	{
 		static void Main(string[] args)
 		{
-			Classes.OverrideImplementation.DisplayResult();
-			//Implementation.SealedExtension.DisplayResult();
+			Implementation.StaticImplementation.DisplayResult();
 		}		
 	}
 }
