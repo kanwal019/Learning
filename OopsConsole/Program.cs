@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using OopsConsole.Implementation;
 
 namespace OopsConsole
 {
@@ -7,7 +6,9 @@ namespace OopsConsole
 	{
 		static void Main(string[] args)
 		{
-            Implementation.DynamicParser.DisplayResult();
+			var sealedObj = new Classes.SealedClass();
+			sealedObj.DisplayRandomNumber();
+			sealedObj.DisplayRandomGuid();
 		}		
 	}
 }
