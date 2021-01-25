@@ -1,4 +1,4 @@
-using DataService.Auth;
+using Auth0.AuthenticationApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace DataService
 {
@@ -40,12 +44,24 @@ namespace DataService
                 {
                     options.Authority = domain;
                     options.Audience = Configuration["Auth0:Audience"];
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnTokenValidated = context =>
+                        {
+                            if (context.SecurityToken is JwtSecurityToken token)
+                            {
+                                if (context.Principal.Identity is ClaimsIdentity identity)
+                                {
+                                    identity.AddClaim(new Claim("access_token", token.RawData));
+                                }
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
-            });
+            services.AddSingleton(x =>
+                new AuthenticationApiClient(new Uri($"https://{Configuration["Auth0:Domain"]}/")));
 
             services.AddControllers().
                 AddNewtonsoftJson(options =>
