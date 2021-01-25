@@ -1,4 +1,5 @@
 ﻿using BikeStoresConnector.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace DataService.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("getOrder/{orderId}")]
         public ActionResult<Order> GetOrder(int orderId)
         {
@@ -45,6 +47,7 @@ namespace DataService.Controllers
             }
         }
 
+        [Authorize]
         [HttpPatch("addItem")]
         public ActionResult<Order> AddItem(Product product, int orderId, int quantity, decimal discount)
         {
