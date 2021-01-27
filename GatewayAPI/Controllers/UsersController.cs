@@ -1,7 +1,6 @@
 ﻿using Library.Common.Commands;
 using Microsoft.AspNetCore.Mvc;
 using RawRabbit;
-using System;
 using System.Threading.Tasks;
 
 namespace API.Gateway.Controllers
