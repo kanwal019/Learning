@@ -1,6 +1,7 @@
 ﻿using System;
 using Library.Common.Commands;
 using Library.Common.Events;
+using Library.Common.RabbitMq;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

@@ -19,7 +19,7 @@ namespace Library.Common.RabbitMq
             IEventHandler<TEvent> handler) where TEvent : IEvent
             => bus.SubscribeAsync<TEvent>(msg => handler.HandleAsync(msg),
                 ctx => ctx.UseConsumerConfiguration(cfg =>
-                cfg.FromDeclaredQueue(q => q.WithName(GetQueueName<TCommand>()))));
+                cfg.FromDeclaredQueue(q => q.WithName(GetQueueName<TEvent>()))));
 
         private static string GetQueueName<T>() => $"{Assembly.GetEntryAssembly().GetName()}/{typeof(T).Name}";
     }
