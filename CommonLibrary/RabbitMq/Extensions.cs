@@ -1,4 +1,4 @@
-﻿using Library.Common.Commands;
+using Library.Common.Commands;
 using Library.Common.Events;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
