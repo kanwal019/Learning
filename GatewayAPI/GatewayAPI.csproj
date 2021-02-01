@@ -9,6 +9,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="RawRabbit" Version="2.0.0-beta8" />
+    <PackageReference Include="RawRabbit.Operations.Publish" Version="2.0.0-beta8" />
+    <PackageReference Include="RawRabbit.Operations.Subscribe" Version="2.0.0-beta8" />
   </ItemGroup>
 
   <ItemGroup>
