@@ -1,3 +1,6 @@
+using API.Gateway.Handlers;
+using Library.Common.Events;
+using Library.Common.RabbitMq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +29,8 @@ namespace API.Gateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddRabbitMq(Configuration);
+            services.AddScoped<IEventHandler<ActivityCreated>, ActivityCreatedHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,11 +42,8 @@ namespace API.Gateway
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
