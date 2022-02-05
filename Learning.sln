@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService", "DataService\DataService.csproj", "{C405876B-7B16-4C8F-B055-48D42AECD236}"
 EndProject
@@ -30,13 +30,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "Logging\Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApi", "NetCoreApi\NetCoreApi.csproj", "{B2BCF923-0B44-4E2E-B81A-90F7E176EDBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayAPI", "GatewayAPI\GatewayAPI.csproj", "{AC05EA06-4036-4ED4-A54B-8270B392F6A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayAPI", "GatewayAPI\GatewayAPI.csproj", "{AC05EA06-4036-4ED4-A54B-8270B392F6A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "IdentityService\IdentityService.csproj", "{C94B4BCC-2250-427A-9815-5E5F29060D18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService", "IdentityService\IdentityService.csproj", "{C94B4BCC-2250-427A-9815-5E5F29060D18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityService", "ActivityService\ActivityService.csproj", "{AA46DF46-4DA0-4298-92B2-512850A003FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivityService", "ActivityService\ActivityService.csproj", "{AA46DF46-4DA0-4298-92B2-512850A003FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{A64FAEF6-7227-46AC-B0BA-FEB3BF9DF6FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{A64FAEF6-7227-46AC-B0BA-FEB3BF9DF6FA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructures", "DataStructures\DataStructures.vcxproj", "{42AE199A-51AF-4628-A2C4-724AB42D5457}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPConsole", "CPPConsole\CPPConsole.vcxproj", "{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -238,6 +242,30 @@ Global
 		{A64FAEF6-7227-46AC-B0BA-FEB3BF9DF6FA}.Release|x64.Build.0 = Release|Any CPU
 		{A64FAEF6-7227-46AC-B0BA-FEB3BF9DF6FA}.Release|x86.ActiveCfg = Release|Any CPU
 		{A64FAEF6-7227-46AC-B0BA-FEB3BF9DF6FA}.Release|x86.Build.0 = Release|Any CPU
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Debug|Any CPU.Build.0 = Debug|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Debug|x64.ActiveCfg = Debug|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Debug|x64.Build.0 = Debug|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Debug|x86.ActiveCfg = Debug|Win32
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Debug|x86.Build.0 = Debug|Win32
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Release|Any CPU.ActiveCfg = Release|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Release|Any CPU.Build.0 = Release|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Release|x64.ActiveCfg = Release|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Release|x64.Build.0 = Release|x64
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Release|x86.ActiveCfg = Release|Win32
+		{42AE199A-51AF-4628-A2C4-724AB42D5457}.Release|x86.Build.0 = Release|Win32
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Debug|Any CPU.Build.0 = Debug|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Debug|x64.ActiveCfg = Debug|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Debug|x64.Build.0 = Debug|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Debug|x86.ActiveCfg = Debug|Win32
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Debug|x86.Build.0 = Debug|Win32
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Release|Any CPU.ActiveCfg = Release|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Release|Any CPU.Build.0 = Release|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Release|x64.ActiveCfg = Release|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Release|x64.Build.0 = Release|x64
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Release|x86.ActiveCfg = Release|Win32
+		{2E2CBDF2-5FFD-4942-8B9C-6523A1F1DE1A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
