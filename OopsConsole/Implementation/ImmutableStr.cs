@@ -1,23 +1,20 @@
 ﻿using Common.Classes;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace OopsConsole.Implementation
+namespace OopsConsole.Implementation;
+
+public class ImmutableStr
 {
-    public class ImmutableStr
+    public static void DisplayResult()
     {
-        public static void DisplayResult()
+        ImmutableString iStr = new();
+        string str = "Hello World !!";
+
+        foreach(char c in str)
         {
-            ImmutableString iStr = new ImmutableString();
-            string str = "Hello World !!";
-
-            foreach(char c in str)
-            {
-                iStr.Append(c);
-            }
-
-            Console.WriteLine(iStr.ToString());
+            iStr.Append(c);
         }
+
+        Console.WriteLine(iStr.ToString());
     }
 }

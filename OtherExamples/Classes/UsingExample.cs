@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using FrameworkLibrary.Classes;
 using CustomMathEnums = FrameworkLibrary.Helpers.Enums.CustomMathEnums;
 
@@ -45,7 +43,7 @@ namespace OtherExamples.Classes
             using (var math = new CustomMath(input))
             {
                 Console.WriteLine();
-                Console.WriteLine("The value of " + methodSelection.ToString() + " of " + input + " is - " + math.GetValue(methodSelection));
+                Console.WriteLine($"The value of {methodSelection} of {input} is - {math.GetValue(methodSelection)}");
             }
         }
     }

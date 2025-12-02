@@ -1,21 +1,18 @@
 ﻿using System;
 using Common.Classes;
-using System.Collections.Generic;
-using System.Text;
 
-namespace OopsConsole.Implementation
+namespace OopsConsole.Implementation;
+
+public class ExtentionMethods
 {
-    public class ExtentionMethods
+    public static void DisplayResult()
     {
-        public static void DisplayResult()
-        {
-            string str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+        string str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
-            Console.WriteLine("Initial String -");
-            Console.WriteLine(str);
-            Console.WriteLine();
-            Console.WriteLine("Shortened String -");
-            Console.WriteLine(str.Shorten(10));
-        }
+        Console.WriteLine("Initial String -");
+        Console.WriteLine(str);
+        Console.WriteLine();
+        Console.WriteLine("Shortened String -");
+        Console.WriteLine(str.Shorten(10));
     }
 }

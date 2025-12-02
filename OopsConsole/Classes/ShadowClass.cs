@@ -1,99 +1,96 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace OopsConsole.Classes
+namespace OopsConsole.Classes;
+
+class ShadowClass
 {
-    class ShadowClass
+    protected internal ShadowClass()
     {
-        protected internal ShadowClass()
-        {
-            Console.WriteLine("Contructor of Shadow class !!");
-        }
-
-        protected internal void FunctionA()
-        {
-            Console.WriteLine("Function A of Shadow class !!");
-        }
-
-        protected internal void FunctionB()
-        {
-            Console.WriteLine("Function B of Shadow class !!");
-        }
-
-        protected internal void FunctionC()
-        {
-            Console.WriteLine("Function C of Shadow class !!");
-        }
+        Console.WriteLine("Contructor of Shadow class !!");
     }
 
-    class ShadowDerived : ShadowClass
+    protected internal void FunctionA()
     {
-        protected internal ShadowDerived()
-        {
-            Console.WriteLine("Contructor of ShadowDerived class !!");
-        }
-
-        protected internal new void FunctionA()
-        {
-            Console.WriteLine("Function A of ShadowDerived class !!");
-        }
-
-        protected internal void FunctionB()
-        {
-            Console.WriteLine("Function B of ShadowDerived class !!");
-        }
+        Console.WriteLine("Function A of Shadow class !!");
     }
 
-    public class ShadowImplementation
+    protected internal void FunctionB()
     {
-        public static void DisplayResult()
-        {
-            Console.WriteLine("------- Shadow Implementation -------");
-            Console.WriteLine();
+        Console.WriteLine("Function B of Shadow class !!");
+    }
 
-            Console.WriteLine("-- ShadowClass shadow = new ShadowClass(); --");
-            
-            ShadowClass shadow = new ShadowClass();
-            shadow.FunctionA();
-            shadow.FunctionB();
-            shadow.FunctionC();
-            Console.WriteLine();
+    protected internal void FunctionC()
+    {
+        Console.WriteLine("Function C of Shadow class !!");
+    }
+}
 
-            Console.WriteLine("-- shadow = new ShadowDerived(); --");
+class ShadowDerived : ShadowClass
+{
+    protected internal ShadowDerived()
+    {
+        Console.WriteLine("Contructor of ShadowDerived class !!");
+    }
 
-            shadow = new ShadowDerived();
-            shadow.FunctionA();
-            shadow.FunctionB();
-            shadow.FunctionC();
-            Console.WriteLine();
+    protected internal new void FunctionA()
+    {
+        Console.WriteLine("Function A of ShadowDerived class !!");
+    }
 
-            Console.WriteLine("-- ShadowDerived shadowDerived = new ShadowDerived(); --");
+    protected internal void FunctionB()
+    {
+        Console.WriteLine("Function B of ShadowDerived class !!");
+    }
+}
 
-            ShadowDerived shadowDerived = new ShadowDerived();
-            shadowDerived.FunctionA();
-            shadowDerived.FunctionB();
-            shadowDerived.FunctionC();
-            Console.WriteLine();
+public class ShadowImplementation
+{
+    public static void DisplayResult()
+    {
+        Console.WriteLine("------- Shadow Implementation -------");
+        Console.WriteLine();
 
-            Console.WriteLine("-- shadowDerived = (new ShadowClass()) as ShadowDerived; --");
-            shadowDerived = (new ShadowClass()) as ShadowDerived;
+        Console.WriteLine("-- ShadowClass shadow = new ShadowClass(); --");
+        
+        ShadowClass shadow = new();
+        shadow.FunctionA();
+        shadow.FunctionB();
+        shadow.FunctionC();
+        Console.WriteLine();
 
-            /*
-            shadowDerived.FunctionA();
-            shadowDerived.FunctionB();
-            shadowDerived.FunctionC();
-            Console.WriteLine();
-            */
+        Console.WriteLine("-- shadow = new ShadowDerived(); --");
 
-            /*
-             * This code will return an error as a child class reference variable can not point 
-             * to base class object because no child class object is created, whereas, when we create 
-             * a child class object, the base class object is auto initiated, so base class reference 
-             * variable can point to child class object.
-             */
+        shadow = new ShadowDerived();
+        shadow.FunctionA();
+        shadow.FunctionB();
+        shadow.FunctionC();
+        Console.WriteLine();
 
-            Console.WriteLine();
-        }
+        Console.WriteLine("-- ShadowDerived shadowDerived = new ShadowDerived(); --");
+
+        ShadowDerived shadowDerived = new();
+        shadowDerived.FunctionA();
+        shadowDerived.FunctionB();
+        shadowDerived.FunctionC();
+        Console.WriteLine();
+
+        Console.WriteLine("-- shadowDerived = (new ShadowClass()) as ShadowDerived; --");
+        shadowDerived = (new ShadowClass()) as ShadowDerived;
+
+        /*
+        shadowDerived.FunctionA();
+        shadowDerived.FunctionB();
+        shadowDerived.FunctionC();
+        Console.WriteLine();
+        */
+
+        /*
+         * This code will return an error as a child class reference variable can not point 
+         * to base class object because no child class object is created, whereas, when we create 
+         * a child class object, the base class object is auto initiated, so base class reference 
+         * variable can point to child class object.
+         */
+
+        Console.WriteLine();
     }
 }

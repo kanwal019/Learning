@@ -2,81 +2,75 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace SchoolConnector.Classes
+namespace SchoolConnector.Classes;
+
+public class Student
 {
-    public class Student
+    private static char DefaultGrade => 'B';
+
+    public bool Add(string name)
     {
-        private char GetDefaultGrade()
+        var student = new Models.Student()
         {
-            return 'B';
+            Name = name,
+            Grade = DefaultGrade
+        };
+
+        return Add(student);
+    }
+
+    public bool Add(Models.Student student)
+    {
+        if (Get(student.Name).Count > 0)
+        {
+            return false;
         }
 
-        public bool Add(string name)
+        try
         {
-            var student = new Models.Student()
+            using var context = new SchoolContext();
+            var std = new Models.Student()
             {
-                Name = name,
-                Grade = GetDefaultGrade()
+                Name = student.Name,
+                Grade = student.Grade
             };
-
-            return Add(student);
+            context.Students.Add(std);
+            context.SaveChanges();
+            return true;
         }
-
-        public bool Add(Models.Student student)
+        catch (Exception ex)
         {
-            if (Get(student.Name).Count > 0)
-            {
-                return false;
-            }
-
-            try
-            {
-                using (var context = new SchoolContext())
-                {
-                    var std = new Models.Student() { 
-                        Name = student.Name,
-                        Grade = student.Grade
-                    };
-                    context.Students.Add(std);
-                    context.SaveChanges();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                _ = ex;
-                return false;
-            }
+            _ = ex;
+            return false;
         }
+    }
 
-        public List<Models.Student> Find(string name)
+    public List<Models.Student> Find(string name)
+    {
+        try
         {
-            try
-            {
-                var context = new SchoolContext();
-                return context.Students.Where(s => s.Name.Contains(name)).ToList();      
-            }
-            catch (Exception ex)
-            {
-                _ = ex;
-                return new List<Models.Student>();
-            }
+            var context = new SchoolContext();
+            return context.Students.Where(s => s.Name.Contains(name)).ToList();      
         }
-
-        public List<Models.Student> Get(string name)
+        catch (Exception ex)
         {
-            try
-            {
-                var context = new SchoolContext();
-                return context.Students.Where(s => s.Name == name).ToList();
-            }
-            catch (Exception ex)
-            {
-                _ = ex;
-                return new List<Models.Student>();
-            }
+            _ = ex;
+            return [];
+        }
+    }
+
+    public List<Models.Student> Get(string name)
+    {
+        try
+        {
+            var context = new SchoolContext();
+            return [.. context.Students.Where(s => s.Name == name)];
+        }
+        catch (Exception ex)
+        {
+            _ = ex;
+            return [];
         }
     }
 }

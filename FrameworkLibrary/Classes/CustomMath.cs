@@ -6,7 +6,7 @@ namespace FrameworkLibrary.Classes
     public class CustomMath : IDisposable
     {
         bool disposed;
-        private IntPtr native_instance;
+        private readonly IntPtr native_instance;
 
         public CustomMath(int input)
         {
