@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FrameworkLibrary.Helpers.Enums
+﻿namespace FrameworkLibrary.Helpers.Enums
 {
     public class CustomMathEnums
     {

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace SchoolConnector.Models;
 
-namespace SchoolConnector.Models
+public class Course
 {
-    public class Course
-    {
-        public int CourseId { get; set; }
-        public string CourseName { get; set; }
-    }
+    public int CourseId { get; set; }
+    public string CourseName { get; set; }
 }

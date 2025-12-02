@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Common.Classes;
 
-namespace Common.Delegates
+namespace Common.Delegates;
+
+public class PhotoProcessor
 {
-    public class PhotoProcessor
+    public void Process(string path, Action<Photo> filterHandler)
     {
-        public void Process(string path, Action<Photo> filterHandler)
-        {
-            var photo = Photo.Load(path);
-            filterHandler(photo); // only the applied filter handlers will be used
-            photo.Save();
-        }
+        var photo = Photo.Load(path);
+        filterHandler(photo); // only the applied filter handlers will be used
+        photo.Save();
     }
 }
