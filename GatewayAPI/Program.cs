@@ -1,17 +1,23 @@
+using API.Gateway.Handlers;
 using Library.Common.Events;
-using Library.Common.Services;
+using Library.Common.RabbitMq;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
-namespace API.Gateway
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+builder.Services.AddRabbitMq(builder.Configuration);
+builder.Services.AddScoped<IEventHandler<ActivityCreated>, ActivityCreatedHandler>();
+builder.Services.AddEventSubscription<ActivityCreated>();
+
+var app = builder.Build();
+if (app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            ServiceHost.Create<Startup>(args)
-                .UseRabbitMq()
-                .SubscribeToEvent<ActivityCreated>()
-                .Build()
-                .Run();
-        }
-    }
+    app.UseDeveloperExceptionPage();
 }
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseAuthorization();
+app.MapControllers();
+await app.RunAsync();
