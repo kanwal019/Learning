@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -34,7 +33,7 @@ app.UseSpa(spa =>
     spa.Options.SourcePath = "ClientApp";
     if (app.Environment.IsDevelopment())
     {
-        spa.UseAngularCliServer(npmScript: "start");
+        spa.UseProxyToSpaDevelopmentServer("http://127.0.0.1:4200");
     }
 });
 
