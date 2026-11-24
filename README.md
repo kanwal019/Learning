@@ -26,7 +26,7 @@ Prerequisites
 - .NET 11 SDK 11.0.100 or a later stable 11.0 SDK, as configured in global.json
 - Visual Studio with .NET 11 support, or VS Code with the C# extension
 - To rebuild ClassicLibrary: Visual Studio C++ build tools with MSVC v143/v145 and Windows SDK 10.0.26100.0
-- Node.js and npm for BikeStoreWeb's Angular frontend
+- Node.js 24.15.0+ (24 LTS) and npm 10+ for BikeStoreWeb's Angular 22 frontend; see [client setup and tests](BikeStoreWeb/ClientApp/README.md).
 
 Build (Windows PowerShell)
 - Open PowerShell at repo root:
@@ -47,6 +47,7 @@ Run & smoke test
   Set-Location W:\Repo\Learning\DataService
   dotnet run
   ```
+- For BikeStoreWeb, run `npm ci` and `npm start` in `BikeStoreWeb/ClientApp` alongside `dotnet run` in `BikeStoreWeb`; browse https://localhost:5001.
 - Verify the configured endpoints with curl or a browser (DataService: /swagger in Development; NetCoreApi: /).
 - RabbitMQ services require a running broker; database examples require SQL Server and their configured databases.
 
