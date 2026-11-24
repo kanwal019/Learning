@@ -1,19 +1,20 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Common.Generics
+namespace Common.Generics;
+
+public class GenericList<T>
 {
-    public class GenericList<T>
+    private readonly List<T> items;
+
+    public GenericList(int capacity = 0)
     {
-        public void Add(T value)
-        {
-
-        }
-
-        public T this[int index]
-        {
-            get { throw new NotImplementedException(); }
-        }
+        // C# 15 passes the constructor argument through the collection expression.
+        items = [with(capacity: capacity)];
     }
+
+    public int Count => items.Count;
+
+    public void Add(T value) => items.Add(value);
+
+    public T this[int index] => items[index];
 }
