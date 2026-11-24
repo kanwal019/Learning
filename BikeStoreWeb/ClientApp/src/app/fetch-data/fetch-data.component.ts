@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,12 +6,14 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './fetch-data.component.html'
 })
 export class FetchDataComponent {
-  public forecasts: WeatherForecast[];
+  readonly forecasts = signal<WeatherForecast[] | null>(null);
+  readonly error = signal(false);
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+  constructor() {
+    inject(HttpClient).get<WeatherForecast[]>('weatherforecast').subscribe({
+      next: forecasts => this.forecasts.set(forecasts),
+      error: () => this.error.set(true)
+    });
   }
 }
 

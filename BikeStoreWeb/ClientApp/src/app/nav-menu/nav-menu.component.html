@@ -7,8 +7,7 @@
       <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
+        aria-controls="navigation"
         aria-label="Toggle navigation"
         [attr.aria-expanded]="isExpanded"
         (click)="toggle()"
@@ -16,8 +15,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
+        id="navigation"
         class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
-        [ngClass]="{ show: isExpanded }"
+        [class.show]="isExpanded"
       >
         <ul class="navbar-nav flex-grow">
           <li

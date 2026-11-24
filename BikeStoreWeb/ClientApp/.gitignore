@@ -5,6 +5,9 @@
 /dist-server
 /tmp
 /out-tsc
+/.angular
+/playwright-report
+/test-results
 
 # dependencies
 /node_modules

@@ -2,9 +2,14 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
+@if (error()) {
+  <p role="alert">Unable to load the weather forecast. Please try again later.</p>
+} @else if (!forecasts()) {
+  <p><em>Loading...</em></p>
+}
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+@if (forecasts(); as items) {
+<table class='table table-striped' aria-labelledby="tableLabel">
   <thead>
     <tr>
       <th>Date</th>
@@ -14,11 +19,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
+    @for (forecast of items; track $index) {
+    <tr>
       <td>{{ forecast.date }}</td>
       <td>{{ forecast.temperatureC }}</td>
       <td>{{ forecast.temperatureF }}</td>
       <td>{{ forecast.summary }}</td>
     </tr>
+    }
   </tbody>
 </table>
+}
