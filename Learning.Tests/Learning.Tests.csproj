@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.12.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="11.0.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Common/Common.csproj" />
+    <ProjectReference Include="../CommonLibrary/CommonLibrary.csproj" />
+    <ProjectReference Include="../FrameworkLibrary/FrameworkLibrary.csproj" />
+    <ProjectReference Include="../DataService/DataService.csproj" Aliases="DataServiceApp" />
+    <ProjectReference Include="../BikeStoreWeb/BikeStoreWeb.csproj" Aliases="BikeStoreWebApp" />
+    <ProjectReference Include="../NetCoreApi/NetCoreApi.csproj" Aliases="NetCoreApiApp" />
+  </ItemGroup>
+</Project>
